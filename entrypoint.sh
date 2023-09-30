@@ -76,6 +76,8 @@ git config --global http.version HTTP/1.1
 echo "[+] Set directory is safe"
 git config --global --add safe.directory /github/workspace
 
+git fetch --unshallow origin
+
 echo "[+] Reassigning remote 'origin' to $GIT_CMD_REPOSITORY"
 git remote rm origin
 git remote add origin $GIT_CMD_REPOSITORY
